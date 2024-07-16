@@ -1,0 +1,17 @@
+.inicio {
+    height: 80vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #comecar {
+    background-color: var(--backgroundAzulEscuro);
+    color: var(--branco);
+  }
+  #adicionarPalavra {
+    background: var(--cinzaClaro);
+    color: var(--cinza);
+    margin-top: 1rem;
+  }

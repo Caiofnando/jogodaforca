@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Jogo da forca online e divertido para toda a família!"
+    />
+    <meta
+      name="keywords"
+      content="jogo, jogo da forca, entreterimento, jogo educativo"
+    />
+    <title>Jogo da forca</title>
+    <link rel="shortcut icon" href="imagens/foguete.ico" type="image/x-icon" />
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/conteudo/iniciarJogo.css" />
+    <link rel="stylesheet" href="css/conteudo/adicionarPalavra.css" />
+    <link rel="stylesheet" href="css/conteudo/jogo.css" />
+
+    <script src="js/forca.js" defer></script>
+    <script src="js/jogo.js" defer></script>
+    <script src="js/funcoes_padroes.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&family=Open+Sans:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Adicionar estilos personalizados diretamente no HTML para simplicidade */
+      .textAreaPalavraNova {
+        margin-bottom: 20px; /* Adiciona uma margem inferior de 20px ao campo de texto */
+      }
+
+      .divSalvarCancelarPalavraNova {
+        margin-top: 20px; /* Adiciona uma margem superior de 20px à div que contém os botões */
+      }
+
+      .botoes {
+        margin-top: 10px; /* Adiciona uma margem superior de 10px aos botões */
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <a href="https://www.alura.com.br/" target="_blank">
+        <img src="C:\Users\Caio\Desktop\jogo da velha\imagens\logo-alura.png" alt="Logo Alura">
+      </a>
+    </header>
+    <main>
+      <section class="inicio" id="inicio">
+        <input id="comecar" class="botoes" type="button" value="Iniciar Jogo" />
+        <input
+          id="adicionarPalavra"
+          class="botoes"
+          type="button"
+          value="Adicionar nova palavra"
+        />
+      </section>
+
+      <section class="desenhoForca">
+        <div class="divEspacoDesenho">
+          <canvas
+            id="espacoDesenho"
+            class="espacoDesenho"
+            width="700"
+            height="350"
+          ></canvas>
+        </div>
+
+        <div class="divResultado">
+          <div class="resultado"></div>
+          <div class="letrasCertas"></div>
+          <div class="letrasErradas"></div>
+         <!-- <input type="text" class="inputCelular">-->
+        </div>
+      </section>
+
+      <section class="novaPalavra">
+        <div class="divTextAreaPalavraNova">
+          <textarea
+            name="textAreaPalavra"
+            id="textAreaPalavra"
+            class="textAreaPalavraNova"
+            cols="30"
+            rows="3"
+            placeholder="Digite uma palavra"
+          ></textarea>
+        </div>
+
+        <div class="divSalvarCancelarPalavraNova">
+          <div class="divAvisoQuantidadeDeLetras">
+            <img src="C:\Users\Caio\Desktop\jogo da velha\imagens\exclamacao.png" alt="Exclamação" class="exclamacao">
+            <label id="aviso" class="textoAviso" for="text">Máx. 8 letras</label>
+          </div>
+          <div class="divBotoesSalvarCancelarPalavraNova">
+            <input
+              type="button"
+              id="salvar"
+              class="botoes"
+              value="Salvar e Começar"
+            />
+            <input
+              type="button"
+              id="cancelar"
+              class="botoes"
+              value="Cancelar"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="botoesFinais">
+        <input type="button" id="novoJogo" class="botoes" value="Novo Jogo" />
+        <input id="desistir" class="botoes" type="button" value="Desistir" />
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="divFooter">
+        <a
+          href="https://github.com/Caiofnando/Caiofnando.git"
+          target="_blank"
+          rel="externo">
+          <img src="C:\Users\Caio\Desktop\jogo da velha\imagens\logo-git_menor.png" alt="Logo Git">
+        </a>
+        <p>Desenvolvido por Caio Fernando</p>
+      </div>
+    </footer>
+  </body>
+</html>
